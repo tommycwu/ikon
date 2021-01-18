@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Okta - Create User</title>
+<style>
+    body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        width: 320px; /* max is about 800 */
+        height: 400px; /* max is about 600 */
+        background-color: white;
+        background-image: url('Img/create_bkg.png');
+    }
+    table.center {
+        margin-left: 550px;
+        margin-right: auto;
+    }
+td {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+    .error {
+        color: red;
+    }
+
+    .block {
+        display: block;
+        width: 200px;
+        border: none;
+        background-color: Highlight;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .block:hover {
+        background-color: lightblue;
+        color: black;
+    }
+
+    div.c {
+        position: absolute;
+        left: 575px;
+        width: 575px;
+    }
+
+    .wait, .wait * {
+        cursor: wait;
+    }
+
+    .pointer, .pointer * {
+        cursor: pointer;
+    }
+
+
+</style>
+</head>
+<body>
+<form>
+    <table class="center">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <tr><td><div style="color:black; font-size:small"><b>FIRST NAME</b></div>
+        <tr><td><input id="firstName" style="height:40px; width:575px; font-size:medium"><td id="firstNameError" class="error">
+        <tr><td><div style="color:black; font-size:small"><b>LAST NAME</b></div>
+        <tr><td><input id="lastName" style="height:40px; width:575px; font-size:medium">
+        <tr><td id="lastNameError" class="error">
+        <tr><td><div style="color:black; font-size:small"><b>EMAIL</b></div>
+        <tr><td><input id="email" style="height:40px; width:575px; font-size:medium">
+        <tr><td id="emailError" class="error">
+        <tr><td><div style="color:black; font-size:small"><b>DATE OF BIRTH (MM/DD/YYYY)</b></div>
+        <tr><td><input id="MM" style="height:40px; width:75px;">&nbsp;<input id="DD" style="height:40px; width:75px;">&nbsp;<input id="YYYY" style="height:40px; width:150px;">
+        <tr><td><img src="Img/select_pwd.png" />
+        <tr><td><input id="password" type="password" style="height:40px; width:575px; font-size:medium">
+        <tr>
+            <td id="passwordError" class="error">
+                <br />
+        <tr><td align="right"><button class="block" type="submit"><b>SIGN UP  ></b></button>
+    </table>
+</form>
+<br>
+<div id="results" class="c"></div>
+<script src="oktaAPIsettings.js"></script>
+<script src="oktaAPI.js"></script>
+<script src="oktaAddPerson.js"></script>
+</body>
+</html>
